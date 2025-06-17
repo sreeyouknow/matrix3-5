@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--#f5dd2c #de3c3f-->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link href="./assets/imgs/logo.jpg" rel="icon">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /*--------------------------------------------------------------
+  # Why Us Section
+  --------------------------------------------------------------*/
+  .why-us {
+    padding: 30px 0;
+  }
+  
+  .why-us .content h3 {
+    font-weight: 400;
+    font-size: 34px;
+  }
+  
+  .why-us .content p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    
+  }
+  
+  .why-us .faq-container .faq-item {
+    background-color: var(--surface-color);
+    position: relative;
+    margin-right: 300px;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+  }
+  
+  .why-us .faq-container .faq-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .why-us .faq-container .faq-item h3 {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 0px;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .why-us .faq-container .faq-item p {
+    font-weight: 500;
+    font-size: 20px;
+  
+  }
+  
+  .why-us .faq-container .faq-item h3 span {
+    color: var(--accent-color);
+    padding-right: 5px;
+    font-weight: 600;
+  }
+  
+  .why-us .faq-container .faq-item h3:hover {
+    color: var(--accent-color);
+  }
+  
+  .why-us .faq-container .faq-item .faq-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: 0.3s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .why-us .faq-container .faq-item .faq-content p {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+  
+  .why-us .faq-container .faq-item .faq-icon {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    font-size: 22px;
+    line-height: 0;
+    transition: 0.3s;
+    color: var(--accent-color);
+  }
+  
+  .why-us .faq-container .faq-item .faq-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 0;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .why-us .faq-container .faq-item .faq-toggle:hover {
+    color: var(--accent-color);
+  }
+  
+  .why-us .faq-container .faq-active h3 {
+    color: var(--accent-color);
+  }
+  
+  .why-us .faq-container .faq-active .faq-content {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    opacity: 1;
+    padding-top: 10px;
+  }
+  
+  .why-us .faq-container .faq-active .faq-toggle {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+  }
+  
+  .why-us .why-us-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .why-us .why-us-img img {
+    max-height: 70%;
+  }
+  
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .why-us .content h3 {
+    font-size: 28px;
+  }
+
+  .why-us .content p {
+    font-size: 16px;
+  }
+
+  .why-us .faq-container {
+    margin-left: -20px;
+  }
+  .why-us .faq-container .faq-item {
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+  .why-us .faq-container .faq-item h3 {
+    font-size: 22px;
+  }
+
+  .why-us .faq-container .faq-item p {
+    font-size: 16px;
+  }
+
+  .why-us .faq-container .faq-item .faq-content p {
+    font-size: 14px;
+  }
+
+  .why-us .faq-container .faq-item .faq-icon {
+    font-size: 18px;
+    left: 10px;
+  }
+
+  .why-us .faq-container .faq-item .faq-toggle {
+    font-size: 14px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .why-us .faq-container .faq-item .faq-toggle:hover {
+    font-size: 16px;
+  }
+
+  .why-us .why-us-img img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-us .content h3 {
+    font-size: 24px;
+  }
+
+  .why-us .content p {
+    font-size: 14px;
+  }
+
+  .why-us .faq-container .faq-item h3 {
+    font-size: 20px;
+  }
+
+  .why-us .faq-container .faq-item p {
+    font-size: 14px;
+  }
+
+  .why-us .faq-container .faq-item .faq-content p {
+    font-size: 12px;
+  }
+
+  .why-us .faq-container .faq-item .faq-icon {
+    font-size: 16px;
+  }
+
+  .why-us .faq-container .faq-item .faq-toggle {
+    font-size: 12px;
+  }
+
+  
+}
+  
+</style>
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="./assets/imgs/logo.jpg" alt="sample"> 
+        <h1 class="sitename"></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Gallery</a></li>
+
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="login.php">Login</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1>AMS Green Life இல் வருவதற்கு நன்றி </h1>
+            <p>இன்றைய உழைப்பு நாளைய வருமானம்! நமது Network Marketing-இல் இணைந்திடுங்கள்</p>
+            <div class="d-flex">
+              <a href="login.php" class="btn-get-started">Login</a>
+              <a href="#" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="./assets/imgs/home.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+
+      <div class="container" data-aos="zoom-in">
+
+        
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              FINANCIAL FREEDOM என்பது ஒரு தனி மனித வாழ்வில் பணம் என்பது அத்தியாவசியமான ஒன்று ஆகும், அந்த பணத்தை சாம்பாதிக்க அனேகமாக வழிகளை மனிதர்கள் தேடுகின்றனர், ஆனால் குறிப்பிட்ட வயது ஆன பிறகு  அவர்கள் பணம் சம்பாதிக்க வேண்டும் என்று நினைத்தாலும் உடல் ஒத்துழைப்பது இல்லை, ஆனால் ஒவ்வொரு மனிதனும் தன்னுடைய வாழ்க்கையிலும் சரி அவர்களுக்கு பின்னால் வரும் சந்ததிகளுக்கு வருமானம் வர வேண்டும் என்று நினைக்கின்றனர், இதை கருத்தில் கொண்டு, எங்கள் நிறுவனமான AMS GREEN LIFE  நிறுவனத்தை மக்கள் மத்தியில் அறிமுகம் செய்யும்  அத்தனை நபர்களுக்கும் FINANCIAL FREEDOM ஆன வாய்ப்பை ஏற்படுத்திக் கொடுக்கிறோம்
+
+            </p>
+            
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>குறிக்கோள் (Mission) அனைத்து தனிநபர்களுக்கும் நிதி சுதந்திரத்தை வழங்கும் வாய்ப்புகளை உருவாக்குதல் எங்கள் நோக்கமாகும். AMS Green Life நிறுவனத்தின் மூலம், நம்பகமான மற்றும் நிலைத்த வருமானம் கிடைக்க செய்வதோடு, ஒவ்வொருவரின் எதிர்காலத்தையும், அவர்களின் சந்ததிகளின் வாழ்க்கையையும் சிறப்பாக மாற்ற முயல்கிறோம். தூரநோக்கு (Vision) நிதி சுதந்திரத்தின் முக்கியத்துவத்தை அனைவரும் அடையும்படி செய்யும் ஒரு முன்னோடியான நிறுவனம் ஆகும். எங்கள் சேவைகள் மற்றும் முயற்சிகள் மூலம், ஒவ்வொரு குடும்பத்திற்கும் நம்பகமான வருமானம் மற்றும் பொருளாதார நிலைமையை மேம்படுத்த உதவிசெய்து, பாதுகாப்பான மற்றும் வளமான எதிர்காலத்தை உருவாக்குவது எங்கள் லட்சியம்.</p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us light-background" data-builder="section">
+
+      <div class="container-fluid">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+            
+              <p>
+               5 நபர்கள் கொண்டு உருவாக்கப்படும் இந்த Network உங்களுடைய வாழ்வில் ஒரு லாபகரமான எதிர்காலத்தை உருவாக்கும். இந்த 5 நபர்களை நீங்கள் அறிமுகம் செய்வதின் மூலம் உங்களுக்கு கிடைக்கூடிய வருமானம் கீழே பட்டியலிடப்பட்டிருக்கு.
+              </p>
+            </div>
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-item ">
+
+                <h3><span>01</span> Stage 1</h3>
+                <div class="faq-content">
+                  <p>level 1 Income: ₹250</p>
+                  <p>level 2 Income: ₹1,250</p>
+                  <p>level 3 Income: Upgrade</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>02</span> Stage 2</h3>
+                <div class="faq-content">
+                  <p>level 1 Income: ₹6,250</p>
+                  <p>level 2 Income: ₹31,250</p>
+                  <p>level 3 Income: Upgrade</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>03</span> Stage 3 </h3>
+                <div class="faq-content">
+                  
+                  <p>level 1 Income: ₹1,75,000</p>
+                  <p>level 2 Income: ₹8,75,000</p>
+                  <p>level 3 Income: ₹43,75,000</p>
+              </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="./assets/imgs/Group66.png" alt="sample" class="img-fluid" data-aos="zoom-in" data-aos-delay="300"  >
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>What Makes Us Special?</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-3 col-md-6 d" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item text-center position-relative">
+              <div class="icon"><!--<i class="bi bi-activity icon"> --></i></div>
+              <h4><a href="" class="stretched-link">25 வருடங்கள் அனுபவம்</a></h4>
+             <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>-->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item text-center position-relative">
+              <div class="icon"><!--<i class="bi bi-bounding-box-circles icon"> --></i></div>
+              <h4><a href="" class="stretched-link">வாரந்தோறும் Meeting</a></h4>
+             <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>-->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item text-center position-relative">
+              <div class="icon"><!--<i class="bi bi-calendar4-week icon"> --></i></div>
+              <h4><a href="" class="stretched-link">Dedicated Manager</a></h4>
+              <!--<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>-->
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item text-center position-relative">
+              <div class="icon"><!--<i class="bi bi-broadcast icon"></i> --></div>
+              <h4><a href="" class="stretched-link">24X7 Support </a></h4>
+             <!-- <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>-->
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background">
+
+      <img src="assets/img/cta-bg.jpg" alt="">
+
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-9 text-center text-xl-start">
+           
+            <p>உங்கள் வாழ்க்கைக்கு நிதி சுதந்திரத்தின் புதிய அத்தியாயத்தை தொடங்குங்கள்! </p>
+          </div>
+          <div class="col-xl-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="register.php">Register</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <section id="faq-2" class="faq-2 section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>நமது நிறுவனத்தில் சேருவதற்கான கோட்பாடு </h2>
+        </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>1</h3>
+                <div class="faq-content">
+                  <p>Amsgreenlife நிறுவனத்தில் இணைந்தவர்க்கு ஐந்து வேலை நாட்களுக்குள் பொருள் தரப்படும் , வாங்க தவறினால் நேரடியாக தலைமை அலுவலகத்தில் பெற்றுக்கொள்ளவும்
+
+                    "Those who join Amsgreenlife will receive the product within five working days. If not collected, it must be picked up directly from the head office."</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="300">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>2</h3>
+                <div class="faq-content">
+                  <p>முதல் படி :வேலை       செய்தல் 
+                    இரண்டாம் படி :பின்  தொடர்தல்
+                    மூன்றாம் படி: பின் தொடர்தல்
+                   - First step: Initiation , working 
+                   - Second step: Continuation follow our team 
+                   - Third step: Follow our team 
+                   - Fourth step : Follow our team</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="400">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>3</h3>
+                <div class="faq-content">
+                  <p>3.ஒரு நபருக்கு ஒரு ID மட்டுமே அனுமதி
+                    "Only one ID is allowed per person."
+                   </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="500">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>4</h3>
+                <div class="faq-content">
+                  <p> 4.payment withdraw  செய்த 3 மணி நேரம் முதல் 48 மணி நேரத்திற்குள் பணம் அனுப்பப்படும்
+                    
+                    "The payment will be sent within 48 hours from the time the withdrawal was made."</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>5</h3>
+                <div class="faq-content">
+                  <p>உங்களுடைய வங்கிக் கணக்கு விவரங்களை தவறாக பதிவு செய்து பணம் வரவில்லை என்றால் நிறுவனம் பொறுப்பல்ல 
+
+                    "If the payment has not been received due to incorrect bank account details provided by you, the company is not responsible."</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>6</h3>
+                <div class="faq-content">
+                  <p>Amsgreenlife நிறுவனத்தின் பெயரையோ லோகோவையோ வைத்து தவறாக வழி நடத்துபவர்களுக்கு நிறுவனம் தக்க நடவடிக்கை எடுக்கப்படும்
+
+                    "The company will take appropriate action against anyone misusing the name or logo of Amsgreenlife."</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="600">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>7</h3>
+                <div class="faq-content">
+                  <p>Amsgreenslife நிறுவனத்தில் இணைந்த பிறகு பணம் திரும்ப பெற இயலாது 
+
+                    "Once joined with Amsgreenslife, a refund will not be possible.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq 2 Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>B . THURINJIPATTI (PO)
+                    PAPPIREDDIPATTI (TK)
+                    DHARMAPURI (DT)
+                    <strong>PINCODE</strong>-635301
+                    </p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+916379686824</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>amsgreenlife7@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+<!-- 
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">AMS Green Life</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>B . THURINJIPATTI (PO) PAPPIREDDIPATTI (TK) </p>
+            <p>DHARMAPURI (DT) PINCODE-635301</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+916379686824</span></p>
+            <p><strong>Email:</strong> <span>amsgreenlife7@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">About</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Gallery</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12" style="margin-bottom: 120px;">
+          <h4>Follow Us</h4>
+          <p>Follow us on social media to get the latest updates about our products and services!</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright 2024 AMS GREEN LIFE</span> <strong class="px-1 sitename"> Powered By </strong> <a href="https://royallipstech.com/">Royallips technologies pvt ltd</a></p>
+      
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>

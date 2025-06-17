@@ -1,0 +1,92 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+
+}
+
+ /* Sidebar Styles */
+ .wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.social_media {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social_media a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+/* Main Content Styles */
+.main_content {
+    margin-left: 250px; /* This ensures the content doesn't go under the sidebar */
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Responsive Sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main_content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
